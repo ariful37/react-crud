@@ -12,8 +12,8 @@ export default function(){
             setUsers(res.data);
         })
     }
-    const deleteUser =(id)=>{
-        http.get('/users').then(res=>{
+    const deleteUser = (id) => {
+        http.delete('/users/'+id).then(res=>{
             fetchAllUsers();
         })
     }
